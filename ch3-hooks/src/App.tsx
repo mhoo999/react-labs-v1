@@ -1,7 +1,12 @@
 import "./App.css";
+import CustomHooks from "./labs/03-custom-hooks/CustomHooks";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <CustomHooks />
+    </>
+  );
 }
 
 export default App;
