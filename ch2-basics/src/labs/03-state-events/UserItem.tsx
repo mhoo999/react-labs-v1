@@ -1,27 +1,14 @@
-import React, { useRef, useState } from "react";
-
 type User = {
     id: number;
     name: string;
 };
 
-export default function UserItem(inName: string) {
-    const [user, setUser] = useState({});
-    const idRef = useRef(0);
+type UserProps = {
+    user: User;
+};
 
-    function createUser() {
-        idRef.current++;
-        const user: User = {
-            id: idRef.current,
-            name: inName,
-        }
-    }
-
-    function deleteUser(id: number) {
-
-    }
-
+export default function UserItem({ user }: UserProps) {
     return (
-        <li key={id}>{name}<button>삭제</button></li>
-    );
+        <li key={user.id}>{user.name}</li>
+    )
 }
